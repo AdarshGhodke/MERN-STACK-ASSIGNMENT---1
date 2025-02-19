@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #a32458;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .form-container {
+        background-color: #7a1e43;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        color: white;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: white;
+        font-size: 14px;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 60px;
+      }
+
+      .radio-group {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .radio-group label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+      }
+
+      .radio-group input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      .register-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: white;
+        color: #000;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .register-btn:hover {
+        background-color: #f0f0f0;
+      }
+
+      select {
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+      }
+
+      @media screen and (max-width: 480px) {
+        .form-container {
+          padding: 20px;
+        }
+
+        .radio-group {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+              <label
+                ><input type="radio" name="gender" value="male" /> Male:</label
+              >
+              <label
+                ><input type="radio" name="gender" value="female" />
+                Female:</label
+              >
+              <label
+                ><input type="radio" name="gender" value="other" />
+                Other:</label
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="language">language</label>
+            <select id="language" name="language">
+              <option value="" selected disabled>Select language</option>
+              <option value="english">English</option>
+              <option value="spanish">Spanish</option>
+              <option value="french">French</option>
+              <option value="german">German</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required />
+          </div>
+          <div class="form-group">
+            <label for="about">About:</label>
+            <textarea
+              id="about"
+              name="about"
+              placeholder="Write about yourself..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="register-btn">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
